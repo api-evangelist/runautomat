@@ -1,0 +1,38 @@
+generated: '2026-07-21'
+method: derived
+source: openapi/runautomat-extract-openapi.json
+docs: https://docs.runautomat.com/guides/concepts/extractors
+entities:
+- name: Extractor
+  id_prefix: ext_
+  description: >-
+    A configured extractor defining the schema and model configuration used to
+    extract structured data from documents.
+- name: ExtractorVersion
+  description: >-
+    A pinned version of an extractor (extractorVersionId), allowing extraction
+    to be locked to a specific configuration.
+- name: ApiKey
+  id_prefix: ak_
+  description: >-
+    Organization-scoped API key used as an HTTP Bearer token; grants access to
+    all extractors within the organization.
+- name: ExtractResponse
+  description: >-
+    Result of a successful extraction; carries a `data` object matching the
+    extractor's schema.
+- name: ErrorResponse
+  description: Flat error object with `error` code and `message`.
+relationships:
+- from: ExtractorVersion
+  to: Extractor
+  type: belongs_to
+  via: extractorId
+- from: ExtractResponse
+  to: Extractor
+  type: belongs_to
+  via: extractorId
+- from: ApiKey
+  to: Extractor
+  type: has_many
+  via: organization scope

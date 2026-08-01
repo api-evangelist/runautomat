@@ -1,0 +1,16 @@
+generated: '2026-07-21'
+method: searched
+source: https://docs.runautomat.com/
+versioning:
+  scheme: spec-version
+  current: '1.0.0'
+  docs: https://docs.runautomat.com/api-reference
+  note: >-
+    OpenAPI info.version is 1.0.0; no URI/header API version segment is exposed
+    on /api/extract.
+deprecation:
+  policy_url: null
+  sunset_header: unknown
+  note: No published deprecation/sunset policy located.
+status_page: https://status.runautomat.com/
+deprecated_operations: []

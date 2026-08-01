@@ -1,0 +1,33 @@
+generated: '2026-07-21'
+method: searched
+source: https://runautomat.com/llms.txt
+docs: https://runautomat.com
+compliance_programs:
+- SOC 2
+- ISO 27001
+- HIPAA
+- GDPR
+standards:
+- id: http-bearer-auth
+  conforms: true
+  evidence: openapi securityScheme type http scheme bearer
+- id: oauth2
+  conforms: false
+  evidence: no oauth2 securitySchemes in OpenAPI
+- id: openid-connect
+  conforms: false
+- id: rfc9457-problem-details
+  conforms: false
+  evidence: errors use a custom {error, message} envelope, not application/problem+json
+- id: soc2
+  conforms: true
+  evidence: SOC 2 certification stated on company site / llms.txt
+- id: iso-27001
+  conforms: true
+  evidence: ISO 27001 certification stated on company site / llms.txt
+- id: hipaa
+  conforms: true
+  evidence: HIPAA compliance stated on company site / llms.txt
+- id: gdpr
+  conforms: true
+  evidence: GDPR compliance stated on company site / llms.txt

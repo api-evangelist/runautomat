@@ -1,0 +1,39 @@
+generated: '2026-07-21'
+method: derived
+source: openapi/runautomat-extract-openapi.json
+docs: https://docs.runautomat.com/guides/getting-started/authentication
+format: custom
+envelope:
+  fields:
+  - error    # machine-readable error code (e.g. "bad_request", "unauthorized")
+  - message  # human-readable description
+  content_type: application/json
+  note: >-
+    The Extract API does not use RFC 9457 problem+json. Errors are returned as a
+    flat JSON object with a machine-readable "error" code and a human-readable
+    "message".
+problems:
+- status: 400
+  error: bad_request
+  title: Malformed or missing required fields
+  detail: >-
+    The request is malformed or missing required fields. Check that you've
+    provided all required fields: `file` and `extractorId`.
+  source_operation: openapi/runautomat-extract-openapi.json#extract
+- status: 401
+  error: unauthorized
+  title: API key missing, invalid, or revoked
+  detail: >-
+    The API key is missing, invalid, or has been revoked. Ensure you're using a
+    valid API key in the `Authorization: Bearer <api_key>` header.
+  source_operation: openapi/runautomat-extract-openapi.json#extract
+- status: 422
+  title: Extraction could not be completed
+  detail: >-
+    The extractor ID doesn't exist or you don't have access to it, the document
+    format is not supported, or the document could not be processed.
+  source_operation: openapi/runautomat-extract-openapi.json#extract
+- status: 500
+  title: Unexpected server error
+  detail: An unexpected error occurred. Please try again or contact support.
+  source_operation: openapi/runautomat-extract-openapi.json#extract

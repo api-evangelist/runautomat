@@ -1,0 +1,44 @@
+generated: '2026-07-21'
+method: derived
+source: openapi/runautomat-extract-openapi.json
+docs: https://docs.runautomat.com/guides/getting-started/introduction
+authentication:
+  style: http-bearer
+  header: Authorization
+  format: 'Bearer ak_<api_key>'
+  ref: authentication/runautomat-authentication.yml
+idempotency:
+  supported: false
+  note: >-
+    No idempotency-key header or parameter is documented on the Extract API.
+pagination:
+  supported: false
+  note: >-
+    The public Extract API exposes a single synchronous operation with no list
+    endpoints, so no pagination convention applies.
+request:
+  content_type: multipart/form-data
+  file_input_options:
+  - binary          # direct upload, max 4.5 MB
+  - base64          # base64-encoded string, max 4.5 MB
+  - data-url        # data URL string, max 4.5 MB
+  - url             # publicly accessible URL, up to 35 MB
+  identifiers:
+    api_key_prefix: ak_
+    extractor_prefix: ext_
+error_envelope:
+  format: custom
+  content_type: application/json
+  fields:
+  - error    # machine-readable code
+  - message  # human-readable message
+  ref: errors/runautomat-problem-types.yml
+versioning:
+  scheme: spec-version
+  current: '1.0.0'
+  note: OpenAPI info.version 1.0.0; no path/header API version segment.
+rate_limit_signal:
+  documented: false
+timeout:
+  param: timeout
+  range_seconds: [1, 300]

@@ -1,7 +1,27 @@
 aid: runautomat
+accessModel:
+  pricing: unknown
+  onboarding: self-serve
+  trial: false
+  try_now: false
+  public: false
+  label: Self-serve signup
+  confidence: medium
+  source:
+  - authentication
+  generated: '2026-07-22'
+  method: derived
+image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/runautomat.png
 name: Runautomat
-description: Runautomat is a company surfaced as a portfolio company of felicis and added to the API Evangelist
-  network as a stub for enrichment. This profile is a lead awaiting the enrichment pipeline.
+description: >-
+  Runautomat (dba Automat) builds AI agents that operate computers the way people do, replacing
+  legacy RPA tools like UiPath, Automation Anywhere, and Blue Prism with self-healing managed
+  automations. Founded in 2022 by ex-Google engineers Lucas Ochoa and Gautam Bose and backed by
+  Felicis, Khosla Ventures, Initialized Capital, and Y Combinator. The platform spans UI-based AI
+  agents (Computer Use RPA), AI document extraction (IDP), API-based automations (iPaaS), and a
+  managed forward-deployed-engineer service. Its public developer surface is the Automat Document
+  Extraction API, a single synchronous /api/extract operation that turns PDFs and images into
+  structured JSON matching a configured extractor, authenticated with an organization API key.
 url: https://raw.githubusercontent.com/api-evangelist/runautomat/refs/heads/main/apis.yml
 x-type: company
 x-source: vc-portfolio
@@ -11,15 +31,84 @@ x-tier: stub
 x-tier-reason: portfolio-lead
 specificationVersion: '0.20'
 created: '2026-07-17'
-modified: '2026-07-17'
+modified: '2026-07-21'
 tags:
 - Company
-apis: []
+- Automation
+- Robotic Process Automation
+- Document Processing
+- Artificial Intelligence
+- Machine Learning
+- Data Extraction
+- iPaaS
+- Agents
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
 - FN: APIs.json
   email: info@apis.io
+apis:
+- aid: runautomat:runautomat-extract-api
+  name: Runautomat extract API
+  description: The extract API from Runautomat — 1 operation(s) for extract.
+  humanURL: https://docs.runautomat.com/guides/getting-started/introduction
+  baseURL: https://studio.runautomat.com
+  tags:
+  - extract
+  properties:
+  - type: OpenAPI
+    url: openapi/runautomat-extract-api-openapi.yml
 common:
 - type: Website
   url: https://runautomat.com
+- type: DeveloperPortal
+  url: https://docs.runautomat.com
+- type: Documentation
+  url: https://docs.runautomat.com/guides/getting-started/introduction
+- type: APIReference
+  url: https://docs.runautomat.com/api-reference
+- type: GettingStarted
+  url: https://docs.runautomat.com/guides/getting-started/quickstart
+- type: Authentication
+  url: authentication/runautomat-authentication.yml
+- type: Blog
+  url: https://www.runautomat.com/blog
+- type: Support
+  url: https://www.runautomat.com/contact
+- type: SignUp
+  url: https://studio.runautomat.com/login
+- type: Pricing
+  url: https://runautomat.com/pricing
+- type: TermsOfService
+  url: https://runautomat.com/terms-of-service
+- type: PrivacyPolicy
+  url: https://privacy.runautomat.com
+- type: StatusPage
+  url: https://status.runautomat.com/
+- type: Compliance
+  url: https://runautomat.com/enterprise
+- type: LLMsTxt
+  url: llms/runautomat-llms.txt
+- type: MCPServer
+  url: mcp/runautomat-mcp.yml
+- type: AgentSkill
+  url: skills/_index.yml
+- type: ErrorCatalog
+  url: errors/runautomat-problem-types.yml
+- type: Conventions
+  url: conventions/runautomat-conventions.yml
+- type: Conformance
+  url: conformance/runautomat-conformance.yml
+- type: Lifecycle
+  url: lifecycle/runautomat-lifecycle.yml
+- type: DataModel
+  url: data-model/runautomat-data-model.yml
+- type: AgenticAccess
+  url: agentic-access/runautomat-agentic-access.yml
+- type: DomainSecurity
+  url: security/runautomat-domain-security.yml
+x-enrichment:
+  date: '2026-07-21'
+  status: enriched
+  artifacts_added: 15
+  pass: local-v1

@@ -1,0 +1,14 @@
+{
+  "provider": "runautomat",
+  "sources": [
+    "runautomat-extract-api-openapi.yml"
+  ],
+  "outputs": [
+    "runautomat-extract-api-openapi.yml"
+  ],
+  "archived": [],
+  "errors": [],
+  "warnings": [],
+  "notes": [],
+  "skipped": []
+}

@@ -1,0 +1,8 @@
+generated: '2026-07-21'
+method: generated
+skills:
+- file: runautomat-extract-document.md
+  name: Extract structured data from a document
+  api: openapi/runautomat-extract-openapi.json
+  operations:
+  - extract
