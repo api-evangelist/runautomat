@@ -59,6 +59,8 @@ apis:
   - type: OpenAPI
     url: openapi/runautomat-extract-api-openapi.yml
 common:
+- type: Overlay
+  url: overlays/runautomat-extract-overlay.yaml
 - type: Website
   url: https://runautomat.com
 - type: DeveloperPortal
