@@ -7,12 +7,16 @@ server:
   transport: http
   url: https://docs.runautomat.com/_mcp/server
   scope: documentation
-  description: >-
-    Official hosted MCP server for the Automat documentation (Mintlify), for AI
-    clients (Claude Code, Cursor, etc.) to query the docs. This is a
-    documentation MCP server, not an execution wrapper over the Extract API.
+  description: Official hosted MCP server for the Automat documentation (Mintlify), for AI clients (Claude
+    Code, Cursor, etc.) to query the docs. This is a documentation MCP server, not an execution wrapper
+    over the Extract API.
 candidate_api_tools:
 - name: extract_document
   description: Extract structured data from a document using a configured extractor.
   source_operation: openapi/runautomat-extract-openapi.json#extract
   status: candidate
+deployment:
+  mode: remote
+  verified: searched
+  checked: '2026-08-12'
+  source: catalog MCP census
