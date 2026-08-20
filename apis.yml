@@ -38,6 +38,16 @@ tags:
 - Robotic Process Automation
 - Document Processing
 - Artificial Intelligence
+- Machine-Learning
+- Data Extraction
+- iPaaS
+- Agents
+tags_raw:
+- Company
+- Automation
+- Robotic Process Automation
+- Document Processing
+- Artificial Intelligence
 - Machine Learning
 - Data Extraction
 - iPaaS
@@ -54,6 +64,8 @@ apis:
   humanURL: https://docs.runautomat.com/guides/getting-started/introduction
   baseURL: https://studio.runautomat.com
   tags:
+  - Extract
+  tags_raw:
   - extract
   properties:
   - type: OpenAPI
