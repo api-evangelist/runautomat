@@ -76,7 +76,7 @@ apis:
   humanURL: https://docs.runautomat.com/guides/getting-started/introduction
   baseURL: https://studio.runautomat.com
   tags:
-  - Extract
+  - extract
   tags_raw:
   - extract
   properties:
