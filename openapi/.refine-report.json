@@ -1,7 +1,7 @@
 {
   "provider": "runautomat",
   "sources": [
-    "runautomat-extract-api-openapi.yml"
+    "_original/runautomat-extract-openapi.json"
   ],
   "outputs": [
     "runautomat-extract-api-openapi.yml"
@@ -9,6 +9,13 @@
   "archived": [],
   "errors": [],
   "warnings": [],
-  "notes": [],
-  "skipped": []
+  "notes": [
+    "sourced from openapi/_original/ (1 archived document(s)); previously refined output at the top level was skipped rather than re-split",
+    "runautomat-extract-openapi.json: upgraded openapi 3.1.0 -> OpenAPI 3.2.0; renamed 2 component key(s) illegal in 3.x (e.g. type_extract:ErrorResponse)",
+    "runautomat-extract-openapi.json: declared missing tag: extract",
+    "apis.yml register: already-registered"
+  ],
+  "skipped": [
+    "runautomat-extract-api-openapi.yml: previously refined output, superseded by openapi/_original/"
+  ]
 }
