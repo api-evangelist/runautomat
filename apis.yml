@@ -48,10 +48,10 @@ modified: '2026-07-21'
 tags:
 - Company
 - Automation
-- Robotic Process Automation
+- RPA
 - Document Processing
 - Artificial Intelligence
-- Machine-Learning
+- Machine Learning
 - Data Extraction
 - iPaaS
 - Agents
@@ -65,6 +65,7 @@ tags_raw:
 - Data Extraction
 - iPaaS
 - Agents
+- Machine-Learning
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
@@ -72,7 +73,7 @@ maintainers:
   email: info@apis.io
 apis:
 - aid: runautomat:runautomat-extract-api
-  name: Runautomat extract API
+  name: Runautomat Extract API
   description: The extract API from Runautomat — 1 operation(s) for extract.
   humanURL: https://docs.runautomat.com/guides/getting-started/introduction
   baseURL: https://studio.runautomat.com
