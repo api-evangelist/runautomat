@@ -135,20 +135,6 @@ paths:
               - file
 components:
   schemas:
-    type_extract_ExtractResponse:
-      type: object
-      properties:
-        data:
-          type: object
-          additionalProperties:
-            description: Any type
-          description: 'The extracted data matching your extractor''s schema.
-
-            The structure depends on how you configured your extractor.'
-      required:
-      - data
-      description: Response from a successful extraction request
-      title: ExtractResponse
     type_extract_ErrorResponse:
       type: object
       properties:
@@ -163,6 +149,20 @@ components:
       - message
       description: Standard error response format
       title: ErrorResponse
+    type_extract_ExtractResponse:
+      type: object
+      properties:
+        data:
+          type: object
+          additionalProperties:
+            description: Any type
+          description: 'The extracted data matching your extractor''s schema.
+
+            The structure depends on how you configured your extractor.'
+      required:
+      - data
+      description: Response from a successful extraction request
+      title: ExtractResponse
   securitySchemes:
     BearerAuthScheme:
       type: http
