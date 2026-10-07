@@ -85,6 +85,8 @@ apis:
   - type: OpenAPI
     url: openapi/runautomat-extract-api-openapi.yml
 common:
+- type: Plans
+  url: plans/runautomat-plans-pricing.yml
 - type: Overlay
   url: overlays/runautomat-extract-overlay.yaml
 - type: Website
