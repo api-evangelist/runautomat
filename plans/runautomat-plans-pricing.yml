@@ -1,0 +1,53 @@
+# Pricing transcribed from the provider's own page — see provenance. Numbers are quoted, not derived.
+generated: '2026-10-07'
+method: searched
+source: https://runautomat.com/pricing
+sources:
+- https://runautomat.com/pricing
+provenance:
+  tool: all/0-working/economics/harvest_pricing.py
+  run: 20261007T104522
+  grounding: every price_text was found verbatim in the fetched page text
+audience: business-product
+pricing_basis: tiered-subscription
+delivery:
+  delivery: managed
+  method: page
+  read: '2026-10-07'
+published: true
+note: Workforce listed at $1,800 per month, $21,600 billed annually (10% off annual); Enterprise is custom/contact
+  us. 14-day trial mentioned.
+plan_count: 2
+currency: USD
+plans:
+- name: Workforce
+  price_text: $1,800
+  price: 1800
+  currency: USD
+  period: month
+  included_quota: Dedicated Mac, email, and company account; no per-seat pricing; for teams of 2 to 50
+- name: Enterprise
+  price_text: Custom
+  period: none
+  included_quota: Fully managed automations, custom SLAs
+x-canonical:
+  generated: '2026-10-08'
+  vocabulary: all/0-working/economics/plans-canonical.yml
+  models:
+  - subscription
+  units: []
+  plans:
+  - name: Workforce
+    access: other
+    model: subscription
+    model_how: derived
+    units: []
+    periods:
+    - month
+  - name: Enterprise
+    access: other
+    model: unstated
+    model_how: derived
+    units: []
+    periods:
+    - none
