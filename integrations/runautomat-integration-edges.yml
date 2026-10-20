@@ -1,0 +1,16 @@
+generated: '2026-10-20'
+method: none
+source:
+- https://zapier.com/apps/runautomat/integrations
+- https://n8n.io/integrations/runautomat/
+- https://composio.dev/toolkits/runautomat
+- https://monid.ai/tools/runautomat
+checked:
+- https://composio.dev/toolkits/runautomat
+- https://monid.ai/tools/runautomat
+- https://n8n.io/integrations/runautomat/
+- https://zapier.com/apps/runautomat/integrations
+summary: null
+marketplace_apps: []
+edges: []
+templates: []
